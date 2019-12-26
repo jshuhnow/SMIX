@@ -6,9 +6,12 @@
 $ virtualenv .env -ppython3
 $ source .env/bin/activate
 (.env) $ pip3 install -r requirements.txt
-(.env) $ export SC2PATH=/your/sc2path
-(.env) $ python3 run_model.py 
+(.env) $ export SC2PATH=/your/SC2PATH
+(.env) $ python3 run_model.py --path=/your/model/path
 ```
+
+For the path, you may use
+`--path="smix/results/models/smix__2019-12-25_04-46-04/10000741"`.
 
 ### Tested environment
 Ubuntu 18.04.3 LTS 64bit  
