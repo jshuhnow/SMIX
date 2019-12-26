@@ -62,8 +62,7 @@ def main(model_path):
     env = StarCraft2Env(map_name="8m",
                         window_size_x=1920 / 3,
                         window_size_y=1080 / 3,
-                        difficulty="4",
-                        state_last_action=True
+                        difficulty="4"
     )
 
     loaded_model = load_model(model_path)
