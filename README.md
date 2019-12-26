@@ -13,7 +13,7 @@ With `num_runs=1000`, (winning rate)=99.8%.
 ## Learning Curve 
 ![SMIX](img/learning_curve.png)  
   
-(x_axis=# of iter)
+x_axis=(# of iter)
 
 ## Contributors
 Jaeseok Huh | jshuh@kaist.ac.kr | KAIST School of Computing  
