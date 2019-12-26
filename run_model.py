@@ -29,6 +29,8 @@ def test_model(model, env, num_runs=50):
             reward, terminated, info = env.step(actions[0])
             model.post_action(reward,terminated,info, actions)
 
+        if i%100 == 0:
+            print(f"{i} / {num_runs}")
         ##########################################################################
 
         if terminated:
