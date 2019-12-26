@@ -22,7 +22,7 @@ def test_model(model, env, num_runs=50):
     for i in range(num_runs):
         ############### you can design your test routines on here. ###############
 
-        if i%10 == 0:
+        if i%100 == 0:
             print(f"{i} / {num_runs}")
 
         terminated = False
