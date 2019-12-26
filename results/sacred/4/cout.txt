@@ -1,0 +1,372 @@
+[INFO 04:38:44] pymarl Running command 'my_main'
+[INFO 04:38:44] pymarl Started run with ID "4"
+[DEBUG 04:38:44] my_main Started
+[WARNING 04:38:44] my_main CUDA flag use_cuda was switched OFF automatically because no CUDA devices are available!
+[INFO 04:38:44] my_main Experiment Parameters:
+[INFO 04:38:44] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'batch_size': 32,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 1500,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '4',
+                    'game_version': None,
+                    'map_name': '8m',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 702388621,
+                    'state_last_action': True,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epsilon_anneal_time': 50000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 's_learner',
+    'learner_log_interval': 20000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 20000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'smix',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 20000,
+    'save_model': True,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 702388621,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 20000,
+    'test_nepisode': 24,
+    'use_cuda': False,
+    'use_tensorboard': False}
+
+[INFO 04:38:44] my_main Beginning training for 10050000 timesteps
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 15045 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-z_3x630n/ -eglpath libEGL.so.1
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:15045/sc2api, attempt: 0, running: True
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 16542 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-1p0j5jz2/ -eglpath libEGL.so.1
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 17013 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-swiwtub8/ -eglpath libEGL.so.1
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 24584 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-qld0hoby/ -eglpath libEGL.so.1
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 24089 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-6yczdnhd/ -eglpath libEGL.so.1
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 22232 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-b9h4utgt/ -eglpath libEGL.so.1
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:24584/sc2api, attempt: 0, running: True
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:17013/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 24584 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-qld0hoby/ -eglpath libEGL.so.1'
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:16542/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 15045 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-z_3x630n/ -eglpath libEGL.so.1'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 17013 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-swiwtub8/ -eglpath libEGL.so.1'
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 18363 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-e36jnj46/ -eglpath libEGL.so.1
+[INFO 04:38:44] absl Launching SC2: /pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 23908 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-iuit1cx4/ -eglpath libEGL.so.1
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 16542 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-1p0j5jz2/ -eglpath libEGL.so.1'
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:22232/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 22232 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-b9h4utgt/ -eglpath libEGL.so.1'
+Starting up...
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:23908/sc2api, attempt: 0, running: True
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:24089/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 24089 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-6yczdnhd/ -eglpath libEGL.so.1'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 23908 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-iuit1cx4/ -eglpath libEGL.so.1'
+Starting up...
+Startup Phase 1 complete
+Starting up...
+[INFO 04:38:44] absl Connecting to: ws://127.0.0.1:18363/sc2api, attempt: 0, running: True
+Startup Phase 1 complete
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/pymarl/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 18363 -dataDir /pymarl/3rdparty/StarCraftII/ -tempDir /tmp/sc-e36jnj46/ -eglpath libEGL.so.1'
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:15045/sc2api, attempt: 1, running: True
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:24584/sc2api, attempt: 1, running: True
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:17013/sc2api, attempt: 1, running: True
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:16542/sc2api, attempt: 1, running: True
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:22232/sc2api, attempt: 1, running: True
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:23908/sc2api, attempt: 1, running: True
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:24089/sc2api, attempt: 1, running: True
+[INFO 04:38:45] absl Connecting to: ws://127.0.0.1:18363/sc2api, attempt: 1, running: True
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so.1 ...
+Failed to find EGL functions in library file!
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so.1 ...
+Failed to find EGL functions in library file!
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so.1 ...
+Failed to find EGL functions in library file!
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so.1 ...
+Startup Phase 2 complete
+Failed to find EGL functions in library file!
+Creating stub renderer...
+Attempting to initialize EGL from file libEGL.so.1 ...
+Failed to find EGL functions in library file!
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so.1 ...
+Failed to find EGL functions in library file!
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so.1 ...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so.1 ...
+Failed to find EGL functions in library file!
+Failed to find EGL functions in library file!
+Creating stub renderer...
+Creating stub renderer...
+Listening on: 127.0.0.1:16542
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:24584
+Startup Phase 3 complete. Ready for commands.
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:15045/sc2api, attempt: 2, running: True
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:17013/sc2api, attempt: 2, running: True
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:24584/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:16542/sc2api, attempt: 2, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:22232/sc2api, attempt: 2, running: True
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:23908/sc2api, attempt: 2, running: True
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:24089/sc2api, attempt: 2, running: True
+[INFO 04:38:46] absl Connecting to: ws://127.0.0.1:18363/sc2api, attempt: 2, running: True
+Listening on: 127.0.0.1:23908
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:17013
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:18363
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:24089
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:22232
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:15045
+Startup Phase 3 complete. Ready for commands.
+[INFO 04:38:47] absl Connecting to: ws://127.0.0.1:15045/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+[INFO 04:38:47] absl Connecting to: ws://127.0.0.1:17013/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+[INFO 04:38:47] absl Connecting to: ws://127.0.0.1:22232/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+[INFO 04:38:47] absl Connecting to: ws://127.0.0.1:24089/sc2api, attempt: 3, running: True
+[INFO 04:38:47] absl Connecting to: ws://127.0.0.1:23908/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+[INFO 04:38:47] absl Connecting to: ws://127.0.0.1:18363/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+/pymarl/src/components/episode_buffer.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 04:38:57] my_main t_env: 268 / 10050000
+[INFO 04:38:57] my_main Estimated time left: 1 hours, 50 minutes, 39 seconds. Time passed: 13 seconds
+[INFO 04:38:59] my_main Saving models to results/models/smix__2019-12-25_04-38-44/268
+[INFO 04:39:17] my_main Updated target network
+[INFO 04:39:32] my_main Updated target network
+[INFO 04:39:48] my_main Updated target network
+[INFO 04:39:55] my_main Recent Stats | t_env:      20139 | Episode:      712
+battle_won_mean:           0.0000	ep_length_mean:           33.5000	epsilon:                   1.0000	grad_norm:                 2.1941
+loss:                      0.1182	q_taken_mean:              0.0133	return_mean:               1.9219	return_std:                0.3074
+target_mean:               0.0388	td_error_abs:              0.2766	test_battle_won_mean:      0.0000	test_ep_length_mean:      28.3750
+test_return_mean:          1.7734	test_return_std:           0.0852	
+[INFO 04:39:56] my_main t_env: 20320 / 10050000
+[INFO 04:39:56] my_main Estimated time left: 8 hours, 5 minutes, 20 seconds. Time passed: 1 minutes, 11 seconds
+[INFO 04:40:03] my_main Updated target network
+[INFO 04:40:16] my_main Updated target network
+[INFO 04:40:28] my_main Updated target network
+[INFO 04:40:40] my_main Updated target network
+[INFO 04:40:52] my_main Updated target network
+[INFO 04:40:53] my_main Recent Stats | t_env:      40151 | Episode:     1616
+battle_won_mean:           0.0000	ep_length_mean:           30.8315	epsilon:                   0.6174	grad_norm:                 1.2669
+loss:                      0.0906	q_taken_mean:              0.0686	return_mean:               2.3227	return_std:                0.6423
+target_mean:               0.0802	td_error_abs:              0.2286	test_battle_won_mean:      0.1042	test_ep_length_mean:      37.3333
+test_return_mean:          7.9655	test_return_std:           1.5995	
+[INFO 04:40:54] my_main t_env: 40337 / 10050000
+[INFO 04:40:54] my_main Estimated time left: 8 hours, 2 minutes, 21 seconds. Time passed: 2 minutes, 9 seconds
