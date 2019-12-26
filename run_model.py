@@ -1,6 +1,5 @@
 import sys
-sys.path.insert(0, "../pymarl/src")
-sys.path.insert(0, "../")
+sys.path.insert(0, "smix/src/")
 
 import argparse
 import numpy as np
@@ -21,9 +20,6 @@ def test_model(model, env, num_runs=50):
     wins = []
     for i in range(num_runs):
         ############### you can design your test routines on here. ###############
-
-        if i%100 == 0:
-            print(f"{i} / {num_runs}")
 
         terminated = False
         model.my_init(env)
