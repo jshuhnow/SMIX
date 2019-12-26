@@ -13,10 +13,10 @@ $ source .env/bin/activate
 ### Tested environment
 Ubuntu 18.04.3 LTS 64bit  
 Intel® Core™ i5-7600 CPU @ 3.50GHz × 4  
-DDR4 2133 MHz 16GB × 2
-GeForce GTX 1060 6GB/PCIe/SSE2
- 
-
+DDR4 2133 MHz 16GB × 2  
+GeForce GTX 1060 6GB/PCIe/SSE2  
+Python 3.6.9   
+SC2 4.6  
 
 ## Performance
 With `num_runs=1000`, (winning rate)=99.8%.
