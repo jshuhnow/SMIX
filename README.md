@@ -10,7 +10,7 @@ $ source .env/bin/activate
 (.env) $ python3 test/run_model.py --path=/your/model/path
 ```
 
-* Because of the module dependency, you must run with the same working directory.
+* Because of the module dependency, you must run in the same working directory as above.
 * For the path, you may use
 `--path="smix/results/models/smix__2019-12-25_04-46-04/10000741"`.  
 
